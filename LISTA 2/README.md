@@ -1,6 +1,6 @@
-## LISTA 2 - APENAS IMPLEMENTAÇÃO DA QUESTÃO 4
+## LISTA 2 - APENAS IMPLEMENTAÇÃO DA QUESTÃO 11
 
-4. Implement a performance-measuring environment simulator for the vacuum-cleaner world depicted in Figure 2.8 and specified on page . Your implementation should be modular so that the sensors, actuators, and environment characteristics (size, shape, dirt placement, etc.) can be changed easily. (Note: for some choices of programming language and operating system there are already implementations in the online code repository.)
+11. Implement a performance-measuring environment simulator for the vacuum-cleaner world depicted in Figure 2.8 and specified on page . Your implementation should be modular so that the sensors, actuators, and environment characteristics (size, shape, dirt placement, etc.) can be changed easily. (Note: for some choices of programming language and operating system there are already implementations in the online code repository.)
 
 ## Figure 2.8
 ![image](https://github.com/user-attachments/assets/505f7e51-5bec-4ffa-ad9c-432f0b750e89)
