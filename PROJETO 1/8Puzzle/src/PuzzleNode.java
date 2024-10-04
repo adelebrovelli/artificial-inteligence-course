@@ -27,6 +27,11 @@ public void setDepth(int depth) {
 }
 
 @Override
+public int hashCode() {
+    return Arrays.deepHashCode(state);  // 'state' é a matriz 2D no PuzzleNode
+}
+
+@Override
 public boolean equals(Object obj) {
     if (this == obj) {
         return true; // Se são o mesmo objeto
