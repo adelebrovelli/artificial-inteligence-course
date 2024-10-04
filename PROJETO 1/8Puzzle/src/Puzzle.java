@@ -180,6 +180,12 @@ public class Puzzle {
         if (ver) {
             System.out.println("Estado inicial embaralhado:");
             puzzle.printState(puzzle.initialState.getState());
+
+            try { //esperar antes de correr pra solução
+                Thread.sleep(3000);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
             
             System.out.println("\nBuscando solução...");
             PuzzleNode solvedNode = puzzle.evokeIDS(puzzle.initialState);
