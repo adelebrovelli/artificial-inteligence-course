@@ -105,7 +105,7 @@ public class Puzzle {
                 return NoTopoPilha; //achou o nó que tava no topo da pilha, aí quebra o while
                 } 
 
-                if(NoTopoPilha.getDepth()<l){ //se o no atual tiver na produndidade  menor do que o limite, aí pode expandir
+                if(NoTopoPilha.getDepth()<l+1){ //se o no atual tiver na profundidade do limite, aí pode expandir
                     List<PuzzleNode> possibilidadesJogo = acoesPossiveis(NoTopoPilha);
 
                     for(PuzzleNode possibilidade : possibilidadesJogo){
