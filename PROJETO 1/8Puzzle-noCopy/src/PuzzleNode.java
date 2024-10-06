@@ -26,21 +26,34 @@ public void setDepth(int depth) {
     this.depth = depth;
 }
 
+public PuzzleNode copy() {
+    int[][] newState = new int[this.state.length][this.state[0].length];
+    
+    for (int i = 0; i < this.state.length; i++) {
+        for (int j = 0; j < this.state[i].length; j++) {
+            newState[i][j] = this.state[i][j];
+        }
+    }
+
+    return new PuzzleNode(newState);
+}
+
 @Override
 public int hashCode() {
-    return Arrays.deepHashCode(state);  // 'state' é a matriz 2D no PuzzleNode
+    return Arrays.deepHashCode(state);  // state é a matriz no node
 }
 
 @Override
 public boolean equals(Object obj) {
     if (this == obj) {
-        return true; // Se são o mesmo objeto
+        return true; 
     }
     if (obj == null || getClass() != obj.getClass()) {
-        return false; // Se o objeto é nulo ou de classe diferente
+        return false; 
     }
     PuzzleNode other = (PuzzleNode) obj;
-    // Comparar os arrays (uso de Arrays.deepEquals para comparar o conteúdo das matrizes)
     return Arrays.deepEquals(this.state, other.state);
 }
+
+
 }
