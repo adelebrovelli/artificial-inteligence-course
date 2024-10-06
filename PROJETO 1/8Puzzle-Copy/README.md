@@ -1,18 +1,21 @@
-## Getting Started
+## the project
+Implement two versions of the function for the 8-puzzle: one that copies and edits the data structure for the parent node s and one that modifies the parent state directly (undoing the modifications as needed). Write versions of iterative deepening depth-first search that use these functions and compare their performance.
+(Available in https://aimacode.github.io/aima-exercises/search-exercises/)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## solution !
+My teacher asked us to solve the 8-puzzle using Iterative-Deepening Search (IDS). I implemented it by defining an initial scrambled state and expanding nodes up to a certain depth limit, increasing the limit incrementally until the goal state is found. The program generates all possible moves from the current state, checks for the goal, and avoids revisiting states. I also ensured the puzzle starts in a solvable state, if it doesn't, its shows a message asking you to play again.
 
-## Folder Structure
+## glossary
+randomizeInitialState(): this function generates a random initial configuration of the puzzle by starting from the goal state and performing a series of random swaps.
 
-The workspace contains two folders by default, where:
+evokeIDS(): main driver for the IDS algorithm. it repeatedly calls the IDS() function, which performs the actual depth-limited search.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+IDS(): It starts with the current state, expands possible moves, and checks if any of the resulting states match the goal. if none are found, it returns and tries with a higher depth.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+acoesPossiveis(): this function generates the possible actions (or moves) based on the current position of the empty tile (0) in the puzzle. each possible new state is added to the list of future states to explore(vector and than, stack).
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+troca(): this is the swap function - swap two tiles in the matrix.
 
-## Dependency Management
+hasSolution(): checks if the current configuration of the puzzle is solvable by counting the number of inversions.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+thank you! 
