@@ -198,7 +198,7 @@ public class Puzzle {
             }
 
         } else {
-            System.out.println("Desculpe, estado inicial não solucionável, reinicie.");
+            System.out.println("Desculpe!! O estado inicial gerado não é solucionável, por favor, reinicie.");
         }
         }
 }
