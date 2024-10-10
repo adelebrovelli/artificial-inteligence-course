@@ -2,6 +2,8 @@
 Implement two versions of the function for the 8-puzzle: one that copies and edits the data structure for the parent node s and one that modifies the parent state directly (undoing the modifications as needed). Write versions of iterative deepening depth-first search that use these functions and compare their performance.
 (Available in https://aimacode.github.io/aima-exercises/search-exercises/)
 
+This is the **copy** version.
+
 ## solution !
 My teacher asked us to solve the 8-puzzle using Iterative-Deepening Search (IDS). I implemented it by defining an initial scrambled state and expanding nodes up to a certain depth limit, increasing the limit incrementally until the goal state is found. The program generates all possible moves from the current state, checks for the goal, and avoids revisiting states. I also ensured the puzzle starts in a solvable state, if it doesn't, its shows a message asking you to play again.
 
